@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class FireStoreHelper{
 
   static const String _collectionAdmin = 'Admins';
+  static const String _collectionCategory = 'Categories';
 
 
   static FirebaseFirestore _db = FirebaseFirestore.instance;
@@ -15,6 +16,9 @@ class FireStoreHelper{
     return snapshot.docs.isNotEmpty;
     
   }
+
+  //amra database thekhe categories k tole niye astasi
+  static Stream<QuerySnapshot<Map<String,dynamic>>> getCategories() => _db.collection(_collectionCategory).snapshots();
 
 
 

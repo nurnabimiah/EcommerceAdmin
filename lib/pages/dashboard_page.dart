@@ -1,5 +1,6 @@
 
 import 'package:firebase_demo/pages/product_list_page.dart';
+import 'package:firebase_demo/providers/product_provider.dart';
 import 'package:flutter/material.dart';
 
 import '../auth/firebase_auth.dart';
@@ -15,6 +16,15 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
+  late ProductProvider _productProvider;
+
+  @override
+  void didChangeDependencies() {
+
+
+    super.didChangeDependencies();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
