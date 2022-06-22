@@ -25,8 +25,8 @@ class MyApp extends StatelessWidget {
 
       providers: [
         ChangeNotifierProvider(create: (context) => ProductProvider()
-          ..getAllCategories()
-        ),
+
+         ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

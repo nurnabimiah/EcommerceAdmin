@@ -1,7 +1,10 @@
 
+//import 'dart:html';
+
 import 'package:firebase_demo/pages/product_list_page.dart';
 import 'package:firebase_demo/providers/product_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../auth/firebase_auth.dart';
 import '../custom_widget/dashboard_button.dart';
@@ -20,8 +23,8 @@ class _DashboardPageState extends State<DashboardPage> {
 
   @override
   void didChangeDependencies() {
-
-
+    _productProvider = Provider.of<ProductProvider>(context,listen:false);
+   _productProvider.init();
     super.didChangeDependencies();
   }
 
